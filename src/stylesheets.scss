@@ -1,0 +1,23 @@
+// Responsive organizer
+
+$breakpoint-phone: 640px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1025px;
+
+@mixin phone {
+  @media (max-width: $breakpoint-phone) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $breakpoint-phone) and (max-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
