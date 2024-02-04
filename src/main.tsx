@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './style.scss';
-import MouseHighlight from './components/MouseHighlight/MouseHighlight';
+import ShouldLoadMouseHighlight from './components/MouseHighlight/shouldLoadMouseHighlight';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <MouseHighlight />
+    <ShouldLoadMouseHighlight />
   </React.StrictMode>
 );
