@@ -1,5 +1,6 @@
+@import '../../stylesheets.scss';
+
 .dot {
-  display: block;
   height: 100px;
   width: 100px;
   background-color: whitesmoke;
@@ -34,5 +35,23 @@
   }
   100% {
     opacity: 0;
+  }
+}
+
+@include phone {
+  .dot {
+    display: none;
+  }
+}
+
+@include tablet {
+  .dot {
+    display: none;
+  }
+}
+
+@include desktop {
+  .dot {
+    display: block;
   }
 }
