@@ -83,10 +83,6 @@ const MouseHighlight = () => {
   }
   return (
     <>
-      <p>
-        {state.cursorPosition.x} {state.cursorPosition.y}
-      </p>
-      <p>{state.isMouseOver ? 'yes' : 'no'}</p>
       <div ref={myDivRef} style={divPosition}></div>
     </>
   );
