@@ -15,7 +15,11 @@ const reducer = (state: State, action: Action) => {
     case ACTIONS.UPDATE_CURSOR_POSITION:
       return { ...state, cursorPosition: action.payload };
     case ACTIONS.SET_MOUSE_OVER:
-      return { ...state, isMouseOver: action.payload };
+      if (state.isMouseOver !== action.payload) {
+        return { ...state, isMouseOver: action.payload };
+      } else {
+        return state;
+      }
     default:
       return state;
   }
@@ -26,7 +30,10 @@ interface State {
 }
 
 const MouseHighlight = () => {
-  const initialState = { cursorPosition: { x: 0, y: 0 }, isMouseOver: false };
+  const initialState: State = {
+    cursorPosition: { x: 0, y: 0 },
+    isMouseOver: false,
+  };
 
   const [state, dispatch] = useReducer(reducer, initialState);
 
@@ -76,6 +83,10 @@ const MouseHighlight = () => {
   }
   return (
     <>
+      <p>
+        {state.cursorPosition.x} {state.cursorPosition.y}
+      </p>
+      <p>{state.isMouseOver ? 'yes' : 'no'}</p>
       <div ref={myDivRef} style={divPosition}></div>
     </>
   );
