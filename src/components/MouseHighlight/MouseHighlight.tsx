@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer, useRef } from 'react';
+import { useEffect, useReducer, useRef } from 'react';
 import './style.scss';
 
 enum ACTIONS {
