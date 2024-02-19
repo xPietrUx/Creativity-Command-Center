@@ -1,7 +1,11 @@
+@import './stylesheets.scss';
+
 body {
   background: linear-gradient(90deg, rgb(80, 0, 53) 0%, rgb(24, 0, 88) 100%);
   background-size: 400% 400%;
   animation: backgroundAnimation 60s linear infinite;
+  color: $main-color;
+  font-family: 'Work Sans', sans-serif;
 }
 
 @keyframes backgroundAnimation {
@@ -13,5 +17,32 @@ body {
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@include phone {
+  html,
+  body {
+    margin: auto;
+    height: auto;
+    overflow: auto;
+  }
+}
+
+@include tablet {
+  html,
+  body {
+    margin: auto;
+    height: auto;
+    overflow: auto;
+  }
+}
+
+@include desktop {
+  html,
+  body {
+    margin: 1%;
+    height: 100%;
+    overflow: hidden;
   }
 }
