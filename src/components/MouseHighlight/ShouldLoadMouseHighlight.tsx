@@ -2,7 +2,7 @@ import { Suspense, lazy, useEffect, useState } from 'react';
 
 const MouseHighlight = lazy(() => import('./MouseHighlight'));
 
-const ShouldLoadMouseHighlight: React.FC = () => {
+const ShouldLoadMouseHighlight = () => {
   let sizeOfWindow: number = 1025;
   const [load, setLoad] = useState(window.innerWidth >= sizeOfWindow);
 
